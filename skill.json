@@ -1,0 +1,42 @@
+{
+  "name": "genpark-agent-to-agent-capability-handshake-negotiator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Standardized Agent-to-Agent (A2A) protocol capability negotiation, SLA contract establishment, and JWT auth handshake.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "multi-agent-swarms",
+  "tags": [
+    "a2a-protocol",
+    "fipa-acl",
+    "agent-handshake",
+    "interoperability",
+    "multi-agent-contracts"
+  ],
+  "inputs": {
+    "requesting_agent_id": {
+      "type": "string"
+    },
+    "target_agent_id": {
+      "type": "string"
+    },
+    "requested_capability": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "handshake_contract_id": {
+      "type": "string"
+    },
+    "capability_granted": {
+      "type": "boolean"
+    },
+    "sla_latency_limit_ms": {
+      "type": "integer"
+    },
+    "contract_proof_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
